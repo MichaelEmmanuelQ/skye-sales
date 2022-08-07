@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skyesales</title>
+    <link rel="shortcut icon" href="./images/newlogo.svg"  />
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="signup.js"></script>
+    <div class="register">
+        <div class='navbar'>
+            <a href="index.html"><img src="image/newlogo.svg"></img></a>
+            <ul class='mj'>
+                <li><a href="index.html">Home</a></li>
+                <li><a href='about-us.html'>About</a></li>
+                <li><a href='how-it-works.html'>How it Works</a></li>
+                <li><a href='Contact Us.html'>Contact Us</a></li>
+                <li><a href='shopNow.html'>Shop Now</a></li>
+            </ul>
+            <div class='ty'>
+                <a href="sign in.html">
+                  <button type='button' class='btn'>Log In</button>
+                </a>
+                <a>
+                  <button type='button' class='skype'>Sign Up</button>
+                </a>
+            </div>
+     </div>
+    <div class="signup">
+        <img class="howcome" src="./image/newlogo.svg" alt="">
+        <h1 class="cold">REGISTER</h1>
+        <div id = "create-acct">
+            <div class="input-box">
+                <label class="name" for="username">Name*</label>
+                <input id="name" class="user" type="text" name="username" placeholder="Tolu Ogechukwu" required>
+                <div class="icon"><i class="fa fa-user"></i></div>
+                <div class="input-5">
+                <label class="look" for="email">Email*</label>
+                <input id = "email"  class="hike" type="email" name="Email" placeholder="" required>
+                <div class="icon-1"><i class="fa fa-envelope-o"></i></div>
+                <div class="input-6">
+                <label  class="tyh " for="myInput" >Create Password*</label>
+                <input id = "password" class="myInput" type="password" name="password" placeholder="" required>
+                <div class="icon-2">
+                    <i class="fa fa-lock"></i>
+                    <span onclick="myFunction()">
+                    <i id="hide1" class="fa fa-eye"></i>
+                    <i id="hide2" class="fa fa-eye-slash"></i>
+                </span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="checkbox">
+            <input class="tull" type="checkbox">
+            <p class="reeel">By cliking this box, you are agreeing to the Terms and Conditions</p>
+        </div>
+        <div class="register">
+            <button onclick="signUp()" id="signUp" class="reto" >REIGSTER </button>
+        </div>
+        </form>
+    </div>
+    </div>
+    
+    <script>
+        function myFunction(){
+            const x = document.querySelector(".myInput")
+            const y = document.getElementById("hide1")
+            const z = document.getElementById("hide2")
+
+            if(x.type === 'password'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else{
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+    </script>
+    <script type = "module" >
+
+
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+            import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js/auth";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+                apiKey: "AIzaSyC9sR999yhECSE9b5brUdwwGC35g8B9X0M",
+                authDomain: "skyesales-82b8a.firebaseapp.com",
+                databaseURL: "https://skyesales-82b8a-default-rtdb.firebaseio.com",
+                projectId: "skyesales-82b8a",
+                storageBucket: "skyesales-82b8a.appspot.com",
+                messagingSenderId: "695150330364",
+                appId: "1:695150330364:web:303cb75463ffa8a555b279",
+                measurementId: "G-3WEL5DNCWL"
+            };
+
+            // Initialize Firebase
+            const auth =  firebase.auth();
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+
+            //signup function
+            function signUp(){
+                const email = document.getElementById("email");
+                const password = document.getElementById("password");
+
+                const promise = auth.createUserWithEmailAndPassword(email.value,password.value);
+                //
+                promise.catch(e=>alert(e.message));
+                alert("SignUp Successfully");
+                alert("whatsup")
+            }
+
+            //signIN function
+            function  signIn(){
+                const email = document.getElementById("email");
+                const password  = document.getElementById("password");
+                const promise = auth.signInWithEmailAndPassword(email.value,password.value);
+                promise.catch(e=>alert(e.message));
+                
+            }
+
+
+            //signOut
+
+            function signOut(){
+                auth.signOut();
+                alert("SignOut Successfully from System");
+            }
+
+            //active user to homepage
+            firebase.auth().onAuthStateChanged((user)=>{
+                if(user){
+                const email = user.email;
+                alert("Active user "+email);
+
+                }else{
+                alert("No Active user Found")
+                }
+            })
+    </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&family=Roboto:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+  }
+.navbar{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px 30px 66px;
+  gap: 130px;
+  position: absolute;
+  width: 100vw;
+  /* width: 1200px;  */
+  height: 88px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+}
+
+.navbar ul{
+  display: flex;
+  font-size: 17px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  /* width: 463px; */
+  height: 16px;
+  list-style: none;
+  margin: 0% auto;
+  margin-right: auto;
+  text-transform: uppercase;
+}
+.navbar ul a{
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 70px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  padding: 2px;
+  
+}
+.navbar ul a:hover{
+  background-color: #FF6700;
+  color: #FFFFFF;
+  border-radius: 5px;
+  padding: 10px;
+
+}
+.mj{
+  margin-left: 10px;
+  
+    /* margin-right: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-right: auto;
+}
+.ty{
+  
+  display: flex;
+  margin-left: 40px;
+  margin-right: 120px;
+  cursor: pointer;
+  text-transform: uppercase;
+  
+}
+.ty a{
+  text-decoration: none;
+}
+.btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin-right: 6px;
+  width: 76px;
+  height: 30px;
+  background: #F5F5F5;
+  border: 1px solid #FF6700;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+.skype{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 86px;
+  height: 30px;
+  background: #FF6700;
+  border-radius: 20px;
+  border: none!important;
+  text-transform: uppercase;
+}
+.signup{
+  position: relative;
+  width: 500px;
+  height: 531px;
+  /* left: 413px; */
+  top: 140px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  /* height: 80vh; */
+
+}
+.howcome{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  position: absolute;
+  width: 134px;
+  height: 40px;
+  left: 150px;
+  top: 14px;
+}
+.cold{
+  /* position: absolute; */
+  width: 100px;
+  height: 20px;
+  left: 170px;
+  top: 60px;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #FF6700;
+}
+/* .signup{
+    position: absolute;
+    width: 455px;
+    height: 531px;
+    left: 413px;
+    top: 94px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+} */
+.howcome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 134px;
+    height: 40px;
+    left: 150px;
+    top: 14px;
+}
+.cold{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    left: 170px;
+    top: 60px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FF6700;
+}
+.name{
+    position: absolute;
+    width: 48px;
+    height: 15px;
+    left: 30px;
+    top: 100px;
+    font-family: 'josefin sans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+    color: #9799AB;
+}
+
+.user{
+    position: absolute;
+    width: 428px;
+    height: 49px;
+    left: 13px;
+    top: 120px;
+    background: #F5F5F5;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    padding-left: 30px;
+    align-content: center;
+}
+
+.icon{
+    position: absolute;
+    left: 19px;
+    top: 135px;
+    color: #21005D;
+}
+
+.look{
+    position: absolute;
+    width: 44px;
+    height: 15px;
+    left: 30px;
+    top: 190px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 15px;
+    color: #9799AB;
+}
+.hike{
+    position: absolute;
+    width: 428px;
+    height: 49px;
+    left: 13px;
+    top: 210px;
+    font-size: 17px;
+    background: #F5F5F5;
+    border-radius: 10px;
+    border: none;
+    padding-left: 30PX;
+}
+.icon-1{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 17px;
+    top: 227px;
+}
+.tyh{
+    position: absolute;
+    width: 140px;
+    height: 15px;
+    left: 30px;
+    top: 280px;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 15px;
+    color: #9799AB;
+}
+.myInput{
+    position: absolute;
+    width: 428px;
+    height: 49px;
+    left: 15px;
+    top: 300px;
+    font-size: 17px;
+    background: #F5F5F5;
+    border-radius: 10px;
+    border: none;
+    padding-left: 30px;
+}
+.icon-2{
+    position: absolute;
+    left: 20px;
+    top: 320px;
+    color: #21005D;
+}
+span{
+ position: absolute;
+ display: flex;
+ left: 400px;
+ bottom: 3px; 
+}
+#hide1{
+  display: none;
+}
+.tull{
+  box-sizing: border-box;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 30px;
+  top: 370px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+}
+.reeel{
+  position: absolute;
+  width: 391px;
+  height: 13px;
+  left: 50px;
+  top: 370px;
+  font-family: 'josefin sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 13px;
+  color: #000000;
+}
+.reto{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  position: absolute;
+  width: 283px;
+  height: 36px;
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  left: 100px;
+  top: 400px;
+  color: #F5F5F5;
+  background: #003777;
+  border-radius: 10px;
+  border: none;
+}
